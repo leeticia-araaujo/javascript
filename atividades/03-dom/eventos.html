@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#div {
+            font: normal 1em 'times new roman';
+            background-color: pink;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <div id="div">
+        interaja...
+    </div>
+
+    <script>
+        var d = window.document.getElementById('div');
+
+        a.addEventListener('click, clicar')
+
+        function clicar(){ // só vai acontecer quando usar o evento
+            d.innerText = 'Olá!'
+        }
+    </script>-->
+    
+    <div id="div" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Clique aqui
+    </div>
+
+    <script>
+        var d = window.document.getElementById('div'); //serve no escopo global
+        
+        function clicar(){ // só vai acontecer quando usar o evento
+            d.innerText = 'Olá!'
+        }
+
+        function entrar(){
+            d.style.background= 'purple'
+        }
+
+        function sair(){
+            d.style.background= 'pink'
+        }
+    </script>
+</body>
+</html>

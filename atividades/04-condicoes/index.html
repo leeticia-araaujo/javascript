@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(90deg, #a6d2a9, #ddecde);
+            margin: 15px;
+        }
+
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 8px;
+        }
+
+        div{
+            margin: auto;
+            width: 400px;
+            height: 200px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.217);
+            padding: 10px;
+        }
+
+        input{
+            border-radius: 25px;
+            border: none;
+            background-color: white;
+            width: 70px;
+            margin: 5px;
+        }
+
+        #res{
+            font-size: 0.8em;
+            text-align: center;
+            position: relative;
+            top: 15%;
+            line-height: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sistema de multas</h1>
+        <p>Velocidade do carro: <input type="number" name="Velocidade" id="velocidade"></p>
+        <input type="button" value="verificar" onmouseenter="entrar()" onmouseout="sair()" onclick="calcular()">
+        <p id="res"> </p>
+    </div>
+
+    <script>
+        var clique = window.document.getElementsByTagName('input')[1];
+
+        function entrar(){
+            clique.style.background = '#09A603';
+            clique.style.color = 'white';
+        }
+
+        function sair(){
+            clique.style.background = 'white';
+            clique.style.color = 'black';
+        }
+
+        function calcular(){
+            const velocidade = window.document.getElementById('velocidade');
+            const vel = Number(velocidade.value);
+            const result = window.document.getElementById('res');
+            result.innerHTML = (`A velocidade do carro é <strong>${vel}Km/h</strong>. <br>`);
+
+            if(vel > 60){
+                result.innerHTML += (`<strong>Você está acima do limite de velocidade! </strong><br>`);  
+            }
+
+            result.innerHTML += (`Dirija com cuidado!`);
+        }
+    </script>
+</body>
+</html>

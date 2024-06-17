@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando strings</title>
+    <style>
+        body {
+            font: 400 18px verdana;
+        }
+        strong {
+            color: rgb(9, 62, 80);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var texto = window.prompt('Digite uma palavra');
+        document.write(`A palavra <strong> ${texto} </strong> tem ${texto.length} letras <br>`);
+        document.writeln(`<strong> ${texto.toUpperCase()} </strong> em maiúscula <br>`);
+        document.writeln(`<strong> ${texto.toLowerCase()} </strong> em minúsculo`);
+    </script>
+</body>
+</html>

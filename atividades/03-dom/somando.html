@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 1em 'Times New Roman';
+        }
+        div{
+            width: 250px;
+            height: 200px;
+            padding: 5px 15px 5px 15px;
+            margin: auto;
+            box-shadow: 2px 1px 12px rgba(0, 0, 0, 0.183);
+        }
+        input{
+            width: 60px;
+            border: 1px solid pink;
+            background-color: rgba(232, 160, 208, 0.132);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> =
+    <input type="button" value="somar" onclick="somar()">
+    <p id="res">Resultado</p>
+    </div>
+
+    <script>
+        function somar(){
+        const texto1 = window.document.getElementById('txtn1');
+        const texto2 = window.document.querySelector('input#txtn2');
+        const res = window.document.getElementById('res')
+
+        const n1 = Number(texto1.value);
+        const n2 = Number(texto2.value);
+
+        const soma = n1 + n2;
+
+        res.innerHTML = `Resultado = ${soma}`;
+        }
+    </script>
+</body>
+</html>

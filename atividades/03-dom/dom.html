@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é DOM?</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 0.7em;
+            font-weight: 400;
+        }
+
+        h1 {
+            color: rgb(248, 70, 135);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com dom</h1>
+    <h2>O que é o DOM?</h2>
+    <p>DOM (Document Object Model) é um conjunto de objetos que formam, representam, a página web. Liga o HTML ao JavaScript</p>
+    <p>Aprendendo a usar o DOM em JS.</p>
+    <div id="link">Clique aqui</div>
+    <script>
+        var p = window.document.getElementsByTagName('p')[1];
+        p.style.color = 'pink'; // vai mudar a cor de p
+        window.document.write('Segundo paragráfo: ' + p.innerText); // innerText vai mostrar o texto que está dentro de P sem a formatação, para usar com a formatação é innerHTML
+
+       /* var div = window.document.getElementById('link');
+        div.style.background = 'lightpink';
+        //div.innerText = 'Carregando...';
+        window.document.getElementById('link').innerText = 'Carregando';*/
+        
+        /*
+        var div = window.document.getElementsByName('link')[0];
+        div.innerText = 'Carregando...';
+        div.style.color = 'pink';
+        */
+
+        var div = window.document.querySelector('div#link'); // seleciono minha div com o id link
+        div.style.background = 'black';
+        div.style.color = 'white'; 
+    </script>
+</body>
+</html>
