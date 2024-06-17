@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando</title>
+    <style>
+        body {
+            margin: 8px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(226, 230, 235);
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);
+            color: rgb(3, 38, 76);
+        }
+    </style>
+</head>
+<body>
+    <h1>Contas</h1>
+    <a href="index.html">Volte para a página anterior</a>
+    <br>
+   <script>
+        var n = Number(window.prompt('Digite um número: '));
+
+        document.write(`<br> Número: ${n}`);
+
+        n = n + 7; // ou n += 7;
+        document.write(`<br> Somado +7 = ${n}`);
+
+        n = n / 2; // ou n /= 2;
+        document.write(`<br> O resultado /2 = ${n}`);
+
+        n = n * 5; // ou n *= 5;
+        document.write(`<br> O resultado *5 = ${n}`);
+
+        n = n - 2; // ou n -= 2;
+        document.write(`<br> O resultado -2 = ${n}`);
+
+        n = n % 2; // ou n %= 2;
+        document.write(`<br> O resultado com o resto da divisão por 2 = ${n}`);
+
+        n = n ** 2; // ou n **= 2;
+        document.write(`<br> O resultado final ^2 é = ${n}`);
+    </script>
+</body>
+</html>

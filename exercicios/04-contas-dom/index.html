@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com DOM</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 0px;
+        }
+
+        p{
+            display: inline-block;
+        }
+
+        input{
+            display: inline-block;
+            width: 80px;
+            border: none;
+            background-color: rgba(209, 206, 206, 0.178);
+            border-radius: 15px;
+            padding: 3px;
+        }
+
+        #soma{
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando</h1>
+    <p>Digite um número: </p>
+    <input type="number" name="numero" id="numero" placeholder="numero 1">
+    <input type="number" name="numero2" id="numero2" placeholder="numero 2">
+    <input type="button" value="calcular" id="soma" onclick="clicar()">
+    <div id="div"></div>
+
+    <script>
+        var soma = window.document.getElementById('soma');
+        var res = window.document.getElementById('div');
+
+        soma.addEventListener('mouseenter', entrar);
+        soma.addEventListener('mouseout', sair);
+
+        function entrar(){
+            soma.style.fontWeight = '600';
+        }
+
+        function sair(){
+            soma.style.fontWeight = '400';
+        }
+
+        function clicar(){
+            const numero = window.document.getElementById('numero');
+            const numero2 = window.document.getElementById('numero2');
+            const n1 = Number(numero.value);
+            const n2 = Number(numero2.value);
+
+            const soma = n1 + n2;
+
+            res.innerHTML = `${n1} + ${n2} = ${soma}`;
+        }
+
+    </script>
+</body>
+</html>

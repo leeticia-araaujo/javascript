@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testanto eventos DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <div id="d01"><p>Quadro 01</p></div>
+    <div id="d02"><p>Quadro 02</p></div>
+    <div id="d03"><p>Quadro 03</p></div>
+
+    <script>
+        var div1 = window.document.getElementById('d01');
+        var div2 = window.document.getElementById('d02');
+        var div3 = window.document.getElementById('d03');
+
+        div1.addEventListener('mouseenter', entrar);
+        div2.addEventListener('mousemove', dentro);
+        div3.addEventListener('click', clicar)
+
+        function entrar(){
+            div1.style.background = '#07beb8';
+            div1.style.borderRadius = '10px' ;
+        }
+
+        function dentro(){
+            div2.style.background = '#9ceaef';
+            div2.style.borderRadius = '10px' ;
+        }
+
+        function clicar(){
+            div3.style.background = '#68d8d6';
+            div3.style.borderRadius = '10px' ;
+        }
+    </script>
+</body>
+</html>
