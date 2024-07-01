@@ -20,10 +20,17 @@
             margin: 8px;
         }
 
+        h2{
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
         div{
             margin: auto;
             width: 400px;
-            height: 200px;
+            height: 220px;
             background-color: whitesmoke;
             border-radius: 20px;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.217);
@@ -42,7 +49,7 @@
             font-size: 0.8em;
             text-align: center;
             position: relative;
-            top: 15%;
+            top: 09%;
             line-height: 18px;
         }
     </style>
@@ -50,6 +57,7 @@
 <body>
     <div>
         <h1>Sistema de multas</h1>
+        <h2>Velocidade máxima permitida: 60km/h</h2>
         <p>Velocidade do carro: <input type="number" name="Velocidade" id="velocidade"></p>
         <input type="button" value="verificar" onmouseenter="entrar()" onmouseout="sair()" onclick="calcular()">
         <p id="res"> </p>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body{
+            font-family: "Lato", sans-serif;
+        }
+
+        h1{
+            font-family: "Playfair Display", serif;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.235);
+            color: rgb(32, 93, 198);
+        }
+
+        input{
+            border: none;
+            border-radius: 20px;
+            background-color: rgba(231, 224, 226, 0.379);
+        }
+
+        #enviar:hover{
+            color: rgb(159, 156, 157);
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+    <p>Qual país você nasceu?</p>
+    <input type="text" name="pais" id="pais" placeholder="Digite aqui...">
+    <input type="button" value="enviar" id="enviar">
+    <p></p>
+
+    <script>
+        var clique = window.document.querySelector('input#enviar');
+
+        clique.addEventListener('click', clicar);
+
+        function clicar(){
+            const pais = window.document.getElementById('pais').value; //.value serve para pegar o valor da string e deixar dentro da function pega o valor mais recente
+            const res = window.document.getElementsByTagName('p')[1];
+
+            if(pais.toLowerCase() === "brasil"){ // .toLowerCase deixa a string em letras minusculas, facilitando a comparação
+                res.innerHTML = `Você é brasileiro :)`;
+            }else{
+                res.innerHTML = `Você é estrangeiro :(`;
+            }
+        }
+    </script>
+</body>
+</html>
