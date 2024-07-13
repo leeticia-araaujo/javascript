@@ -2,10 +2,8 @@ function carregar(){
 
     const texto = window.document.getElementById('texto');
     const img = window.document.getElementById('imagem');
-    //const data = new Date();
-    //const hora = data.getHours();
-
-    hora = 15
+    const data = new Date();
+    const hora = data.getHours();
 
     texto.innerHTML = `Agora são ${hora} horas.<br>`;
 
