@@ -1,46 +1,41 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;0,700; 1.300;1.400;1.700&display=swap');
-
-/*:root{
-    --dia: #80c0f5;
-    --tarde: #e3a262;
-    --noite: #1d454d;
-}*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 body{
-    font-family: "Roboto", sans-serif;
     text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: black;
 }
 
 h1{
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
 }
 
 section{
     background-color: white;
-    min-width: 250px;
     max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #00000042;
+    min-width: 300px;
     margin: auto;
-    padding: 10px;
+    border-radius: 17px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.32);
+    padding: 8px;
 }
 
-footer{
-    color: rgba(255, 255, 255, 0.84);
-    font-size: 0.8em;
+section > p{
+    margin: 5px 0px;
+    line-height: 1.5;
 }
 
 img{
-    width: 250px;
     height: 250px;
-    padding: 5px;
+    width: 250px;
 }
 
-#texto{
-    margin: 5px;
-    line-height: 1.5em;
+footer{
+    font-family: "Lora", sans-serif;
+    font-size: 0.8em;
 }

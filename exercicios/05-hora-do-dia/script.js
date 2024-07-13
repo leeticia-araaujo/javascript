@@ -1,23 +1,30 @@
 function carregar(){
 
-    const texto = window.document.getElementById('texto');
-    const img = window.document.getElementById('imagem');
     const data = new Date();
     const hora = data.getHours();
+    const texto = window.document.querySelector('p#texto');
+    const img = window.document.getElementsByTagName('img')[0];
 
-    texto.innerHTML = `Agora são ${hora} horas.<br>`;
-
-    if(hora > 4 && hora < 12){
-        texto.innerHTML += `Bom dia!`;
+    if(hora >= 5 && hora < 12){
+        texto.innerHTML = `Agora são ${hora} horas. <br> Bom dia!`;
         img.src = 'img/dia.png';
-        document.body.style.background = '#80c0f5';
+        document.body.style.background = '#f2e2ff';
     } else if(hora >= 12 && hora < 18){
-        texto.innerHTML += `Boa tarde!`;
+        texto.innerHTML = `Agora são ${hora} horas. <br> Boa tarde!`;
         img.src = 'img/tarde.png';
-        document.body.style.background = '#e3a262';
-    } else{
-        texto.innerHTML += `Boa noite!`;
+        document.body.style.background = '#9fd9fe';
+    } else if(hora >= 18 && hora <= 23){
+        texto.innerHTML = `Agora são ${hora} horas. <br> Boa noite!`;
         img.src = 'img/noite.png';
-        document.body.style.background = '#1d454d';
+        document.body.style.background = '#fff59e';
+    } else{
+        texto.innerHTML = `Agora são ${hora} horas. <br> Boa madrugada!`;
+        img.src = 'img/madrugada.png';
+        document.body.style.background = '#29dddc';
     }
 }
+
+//dia - #f2e2ff
+//tarde - #9fd9fe
+//noite - #fff59e
+//madru - #29dddc
