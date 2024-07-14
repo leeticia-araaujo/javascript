@@ -5,20 +5,22 @@ function carregar(){
     const texto = window.document.querySelector('p#texto');
     const img = window.document.getElementsByTagName('img')[0];
 
+    texto.innerHTML = `Agora são ${hora} horas. <br>`;
+
     if(hora >= 5 && hora < 12){
-        texto.innerHTML = `Agora são ${hora} horas. <br> Bom dia!`;
+        texto.innerHTML += `Bom dia!`;
         img.src = 'img/dia.png';
         document.body.style.background = '#f2e2ff';
     } else if(hora >= 12 && hora < 18){
-        texto.innerHTML = `Agora são ${hora} horas. <br> Boa tarde!`;
+        texto.innerHTML += `Boa tarde!`;
         img.src = 'img/tarde.png';
         document.body.style.background = '#9fd9fe';
     } else if(hora >= 18 && hora <= 23){
-        texto.innerHTML = `Agora são ${hora} horas. <br> Boa noite!`;
+        texto.innerHTML += `Boa noite!`;
         img.src = 'img/noite.png';
         document.body.style.background = '#fff59e';
     } else{
-        texto.innerHTML = `Agora são ${hora} horas. <br> Boa madrugada!`;
+        texto.innerHTML += `Boa madrugada!`;
         img.src = 'img/madrugada.png';
         document.body.style.background = '#29dddc';
     }

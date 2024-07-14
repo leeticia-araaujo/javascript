@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <head>
+        <h1>Verificador de idade</h1>
+    </head>
     <section>
-        <div id="div1">
-            <h1>Verificador de idade</h1>
-        </div>
-        <div id="div2">
-            <p>Ano de nascimento: <input type="number" name="ano" id="ano" min="0" step="1"></p>
-            <p>Você se identifica como:
-                <input type="radio" name="sex" id="" checked><label for="">Mulher</label>
-                <input type="radio" name="sex" id=""><label for="">Homem</label>
+        <div>
+            <p>Ano de nascimento: <input type="number" name="ano" id="ano" min="0" class="input"></p>
+            <p>Você se identifica como: 
+                <input type="radio" name="sex" id="fem" checked><label for="fem">Mulher</label>
+                <input type="radio" name="sex" id="masc"><label for="masc">Homem</label>
             </p>
-            <p><input type="button" value="verificar" id="clique"></p>
+            <p>
+                <input type="button" value="Verificar" class="input">
+            </p>
         </div>
-        <div id="div3">
-            
+        <div id="res">
+
         </div>
     </section>
     <footer>
