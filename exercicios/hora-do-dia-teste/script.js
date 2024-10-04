@@ -4,8 +4,24 @@ function carregar(){
     const img = window.document.getElementById('imagem');
     const data = new Date();
     const hora = data.getHours();
+    const min = data.getMinutes();
 
-    texto.innerHTML = `Agora são ${hora} horas.<br>`;
+    let pluralHoras = ""
+    let pluralMinutos = ""
+
+    if (hora != 1) {
+        pluralHoras = "horas"
+    } else {
+        pluralHoras = "hora"
+    }
+    
+    if (min != 1) {
+        pluralMinutos = "minutos"
+    } else {
+        pluralMinutos = "minuto"
+    }
+
+    texto.innerHTML = `Agora são ${hora} ${pluralHoras} e ${min} ${pluralMinutos}.<br>`;
 
     if(hora > 4 && hora < 12){
         texto.innerHTML += `Bom dia!`;

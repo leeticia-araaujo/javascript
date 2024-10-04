@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do dia</title>
+    <title>Tabuada Multiplicação</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
-        <p id="texto"></p>
-        <img src="img/dia.png" alt="">
+        <div>
+            <p>Número: <input type="number" name="num" id="num" placeholder="Digite um número"></p>
+            <input type="button" value="Gerar tabuada" id="btn">
+        </div>
+        <div>
+            <p id="res"></p>
+        </div>
     </section>
     <footer>
         <p>Desenvolvido por <em>Letícia Cristina</em></p>
     </footer>
     <script src="script.js"></script>
 </body>
-</html>

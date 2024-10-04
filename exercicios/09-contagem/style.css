@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body{
+    text-align: center;
+    background-color: #f3e6cd;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1{
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+section{
+    background-color: #ed6a8d;
+    color: white;
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px 0px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 1px 1px 6px #0000003d;
+}
+
+.pdiv{
+    display: inline-block;
+    width: 50px;
+    margin: 10px 5px;
+}
+
+#res{
+    padding: 5px;
+    text-align: justify;
+    line-height: 1.4em;
+}
+
+input{
+    border-radius: 6px;
+    border: none;
+}
+
+#contar{
+    margin: 10px 5px;
+    background-color: white;
+}
+
+::-webkit-input-placeholder { /* Alterar o placeholder (Chrome, Safari, Edge) */
+    font-size: 10px; /* Tamanho da fonte desejado */
+}
+
+footer > p{
+    font-size: 0.8em;
+}

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body{
+    background-image: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+section{
+    background-color: white;
+    min-width: 320px;
+    max-width: 560px;
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.217);
+    text-align: left;
+}
+
+select{
+    height: 180px;
+    width: 220px;
+    border: 1px solid #8ec5fc6b;
+    margin-bottom: 5px;
+    padding: 3px;
+    display: flex;
+}
+
+#num{
+    width: 8em;
+    margin: 0px 5px;
+}
+
+.botao{
+    background-color: white;
+    border: 1px solid #E0C3FC;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+#fin, #limpar{
+    border: 1px solid #8EC5FC;
+}
+
+#adc:hover{
+    background-color: #E0C3FC;
+    border: 1px solid #E0C3FC;
+}
+
+#fin:hover, #limpar:hover{
+    background-color: #8EC5FC;
+    border: 1px solid #8EC5FC;
+}
+
+div#res{
+    padding: 10px 0px;
+    line-height: 1.8em;
+}
+
+footer > p{
+    font-size: 0.8em;
+    font-family: 'Lora', serif;
+}
