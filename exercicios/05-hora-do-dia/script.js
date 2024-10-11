@@ -2,10 +2,26 @@ function carregar(){
 
     const data = new Date();
     const hora = data.getHours();
+    const min = data.getMinutes();
     const texto = window.document.querySelector('p#texto');
     const img = window.document.getElementsByTagName('img')[0];
 
-    texto.innerHTML = `Agora são ${hora} horas. <br>`;
+    let time = "";
+    let minutes = "";
+
+    if(hora != 1){
+        time = "horas";
+    } else{
+        time = "hora";
+    }
+
+    if(min != 1){
+        minutes = "minutos";
+    } else{
+        minutes = "minuto";
+    }
+
+    texto.innerHTML = `Agora são ${hora} ${time} e ${min} ${minutes}. <br>`;
 
     if(hora >= 5 && hora < 12){
         texto.innerHTML += `Bom dia!`;
