@@ -1,5 +1,5 @@
-let currentStep = 0; // Variável para controlar qual o passo atual do formulário
-const formSteps = document.querySelectorAll('.form-step'); // Seleciona todos os passos do formulário
+let currentStep = 0; //variável para controlar qual o passo atual do formulário
+const formSteps = document.querySelectorAll('.form-step'); //seleciona todos os passos do formulário
 const form = document.querySelector('form');
 
 /*passos*/
@@ -38,15 +38,15 @@ form.addEventListener('submit', (e) => {
 /*update steps*/
 
 function updateActiveStep(){
-    formSteps.forEach(step => step.classList.remove('on')); // Remove a classe 'on'
-    formSteps[currentStep].classList.add('on'); // Adiciona a classe 'on' ao passo atual
+    formSteps.forEach(step => step.classList.remove('on')); //remove a classe 'on'
+    formSteps[currentStep].classList.add('on'); //adiciona a classe 'on' ao passo atual
 }
 
-const stepProgress = document.querySelectorAll('.step-progress [data-step]'); // Seleciona o passo que está o progresso 
+const stepProgress = document.querySelectorAll('.step-progress [data-step]'); //seleciona o passo que está o progresso 
 
 function updateProgressStep(){
     stepProgress.forEach((step,idx) =>{
-        step.classList.remove('on', 'done'); // Remove as classes 'on' e 'done'
+        step.classList.remove('on', 'done'); //remove as classes 'on' e 'done'
 
         if(idx < currentStep + 1){
             step.classList.add('on');
@@ -71,7 +71,7 @@ function valido(){
 
 formSteps.forEach(formStep => {
     function addHidden(){
-        formStep.classList.add('hidden'); // Adiciona a classe 'hidden'
+        formStep.classList.add('hidden'); //adiciona a classe 'hidden'
     }
 
     formStep.addEventListener('animationend', () => {
