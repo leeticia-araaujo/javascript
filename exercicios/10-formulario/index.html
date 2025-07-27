@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form>
+            <div class="step-progress step"> <!-- Indica o progresso do formulário -->
+                <strong class="on" data-step>Contact</strong>
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41663 2L6.41663 7L1.41663 12" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+                </svg>    
+                <strong data-step>Company</strong>
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41663 2L6.41663 7L1.41663 12" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+                </svg> 
+                <strong data-step>Project</strong>
+            </div>
+
+            <!--primeira parte do form-->
+
+            <div class="form-step on hidden"> 
+                <div class="content"> <!-- Conteúdo do formulário -->
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input">
+                        <label for="phone">Contact</label>
+                        <input id="phone" name="phone" type="text" placeholder="Enter your phone number" onkeypress="return /\d/.test(event.key)">
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="button justify-end"> <!-- Botões -->
+                    <button class="btn primary" type="button" data-action="next">Continue</button>
+                </div>
+            </div>
+
+             <!--segunda parte do form-->
+
+            <div class="form-step hidden"> 
+                <div class="content"> <!-- Conteúdo do formulário -->
+                    <div class="input">
+                        <label for="company-name">Company name</label>
+                        <input id="company-name" name="company-name" type="text" placeholder="Enter the company name" required>
+                    </div>
+                    <div class="input">
+                        <label for="employees">Number of employees</label>
+                        <input id="employees" name="employees" type="text" placeholder="Enter the number of employees" onkeypress="return /\d/.test(event.key)">
+                    </div>
+                    <div class="input">
+                        <label for="about">About your business</label>
+                        <textarea id="about" name="about" placeholder="Tell us a little about your products and services"></textarea>
+                    </div>
+                </div>
+                <div class="button"> <!-- Botões -->
+                    <button class="btn secondary"  type="button" data-action="prev">Back</button>
+                    <button class="btn primary"  type="button" data-action="next">Continue</button>
+                </div>
+            </div>
+
+             <!--terceira parte do form-->
+
+            <div class="form-step hidden"> 
+                <div class="content"> <!-- Conteúdo do formulário -->
+                    <div class="input">
+                        <label for="project">Project objective</label>
+                        <textarea id="project" name="project" placeholder="Describe the objectives of the project"></textarea>
+                    </div>
+                </div>
+                <div class="button"> <!-- Botões -->
+                    <button class="btn secondary" data-action="prev">Back</button>
+                    <button class="btn primary" type="submit">Send response</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
