@@ -1,5 +1,5 @@
 # JavaScript
-Este repositório é dedicado ao meu estudo e atividades práticas de JavaScript. Nele contém a maior parte dos projetos que desenvolvi usando a linguagem JS.
+Este repositório é dedicado ao meu estudo e atividades práticas de JavaScript. Nele está a maior parte dos projetos que desenvolvi usando a linguagem.
 
 ## ✨ Meus exercícios  
 
